@@ -1,26 +1,25 @@
 package com.danidemi.tutorial.java.javarx;
 
 import io.reactivex.Flowable;
-import io.reactivex.functions.Function;
 import io.reactivex.functions.Predicate;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
+
 
 import java.io.IOException;
 import java.io.UncheckedIOException;
 import java.util.concurrent.Callable;
-import java.util.concurrent.Future;
 
 import static io.reactivex.Flowable.*;
 
 public class FlowableSamples {
 
     @Test
-    void helloWorld() {
+    public void helloWorld() {
         just("Hello world").subscribe(System.out::println);
     }
 
     @Test
-    void flowableFromCallable() {
+    public void flowableFromCallable() {
         fromCallable(new Callable<String>() {
             @Override public String call() throws Exception {
                 return "Hello world";
@@ -29,7 +28,7 @@ public class FlowableSamples {
     }
 
     @Test
-    void combineSlowCallables() {
+    public void combineSlowCallables() {
 
         PNRService pnrService = new PNRService();
 

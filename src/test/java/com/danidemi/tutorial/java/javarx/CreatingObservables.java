@@ -2,25 +2,26 @@ package com.danidemi.tutorial.java.javarx;
 
 import io.reactivex.Observable;
 import io.reactivex.functions.Consumer;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.Test;
+import org.junit.After;
+import org.junit.Assert;
+import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicLong;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.Assert.assertEquals;
+
 
 public class CreatingObservables {
 
     private Logger log = LoggerFactory.getLogger(getClass());
 
-    @AfterEach
-    void logTestEnd() {
+    @After
+    public void logTestEnd() {
         log.info("Test ended.");
     }
-
 
     @Test
     public void createAnObserver() {

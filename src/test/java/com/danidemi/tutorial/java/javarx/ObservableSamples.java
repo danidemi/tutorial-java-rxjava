@@ -3,18 +3,20 @@ package com.danidemi.tutorial.java.javarx;
 import io.reactivex.Observable;
 import io.reactivex.Observer;
 import io.reactivex.disposables.Disposable;
-import org.junit.jupiter.api.Test;
+
+import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.Assert.assertEquals;
+
 
 public class ObservableSamples {
 
     Logger log = LoggerFactory.getLogger(this.getClass());
 
     @Test
-    void byDefaultAnObservableEmitsTheWholeSequenceOfItemsEachTimeItIsSubscribed() {
+    public void byDefaultAnObservableEmitsTheWholeSequenceOfItemsEachTimeItIsSubscribed() {
 
         // given
         log.info("Hello!");
